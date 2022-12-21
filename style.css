@@ -179,8 +179,7 @@ strong {
 /* Footer*/
 .footer-basic {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
   padding: 50px 0;
   background-color: #282d32;
   color: white;
@@ -188,6 +187,8 @@ strong {
 
 .footer-basic ul {
   display: flex;
+  flex-direction: row;
+  margin: 0 auto;
   padding: 0;
   list-style: none;
   font-size: 18px;
@@ -236,7 +237,7 @@ strong {
   text-align: center;
   font-size: 13px;
   color: #aaa;
-  margin-bottom: 0;
+  margin: 0;
 }
 
 /* Media queries */
@@ -293,14 +294,6 @@ strong {
     animation: none;
   }
 
-  footer {
-    width: 100%;
-  }
-
-  .footer-basic ul {
-    justify-content: space-around;
-  }
-
   #tooltip-text {
     display: none;
   }
@@ -308,5 +301,9 @@ strong {
   #preparation ul {
     line-height: 30px;
     list-style-type: none;
+  }
+
+  .footer-basic ul li {
+    font-size: 14px;
   }
 }
