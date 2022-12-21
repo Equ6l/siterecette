@@ -1,305 +1,312 @@
 * {
-    font-family:'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
-html, body {
-    width: 100%;
-    height:100%;
-    margin:0;
-    padding:0;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /* Banner */
 .banner {
-    background-image: url('./img/apple-pie.jpg');
-    background-size:cover;
-    width: 100%;
-    height:400px;
-    opacity:.85;
-    display:flex;
-    align-items: center;
-    justify-content: center;
+  background-image: url("./img/apple-pie.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 400px;
+  opacity: 0.85;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .banner h1 {
-    margin:auto;
-    color:white;
-    text-transform: uppercase;
-    font-size: 4em;
-    animation-duration:2s;
-    animation-name:slide;
-    flex-shrink: 0;
+  margin: auto;
+  color: white;
+  text-transform: uppercase;
+  font-size: 4em;
+  animation-duration: 2s;
+  animation-name: slide;
+  flex-shrink: 0;
 }
-
 
 @keyframes slide {
-    from {
-        opacity:0;
-      margin-bottom: 0px;
-    }
-  
-    to {
-        opacity:1;
-      margin-bottom: 160px;
-    }
+  from {
+    opacity: 0;
+    margin-bottom: 0px;
   }
 
-#recipe h1 {
-    color:salmon;
+  to {
+    opacity: 1;
+    margin-bottom: 160px;
+  }
 }
 
+#recipe h1 {
+  color: salmon;
+}
 
-h3, h4 {
-    font-weight: 600;
+h3,
+h4 {
+  font-weight: 600;
 }
 
 h4 {
-    color:salmon;
+  color: salmon;
 }
 
 li a {
-    text-decoration: none;
-    color:salmon; 
+  text-decoration: none;
+  color: salmon;
 }
 
 li a:visited {
-    text-decoration: none;
-    color:salmon;
+  text-decoration: none;
+  color: salmon;
 }
 
 /* Grid */
 #background {
-    background-image: url('./img/Fond.png');
-    background-size:cover;
+  background-image: url("./img/Fond.png");
+  background-size: cover;
 }
 
 #container {
-    width:90%;
-    padding:80px 0;
-    margin:auto;
-    display:grid;
-    grid-template-columns: 0.5fr 1fr 1fr 1fr;
-    grid-template-rows: repeat(2, 0.5fr);
-    grid-template-areas:
+  width: 90%;
+  padding: 80px 0;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 1fr 1fr;
+  grid-template-rows: repeat(2, 0.5fr);
+  grid-template-areas:
     "menu recipe recipe recipe"
     "menu ingredients ingredients note"
     "none preparation preparation preparation";
-    gap:2em;
+  gap: 2em;
 }
 
 .item {
-    background-color: white;
-    padding:20px;
-    border-top:1px solid rgb(204, 204, 204);
-    border-left:1px solid rgb(204, 204, 204);
-    border-radius:25px;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+  background-color: white;
+  padding: 20px;
+  border-top: 1px solid rgb(204, 204, 204);
+  border-left: 1px solid rgb(204, 204, 204);
+  border-radius: 25px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
 }
 
 #recipe {
-    grid-area:recipe;
+  grid-area: recipe;
 }
 
 #menu {
-    grid-area:menu;
+  grid-area: menu;
 }
 
 #ingredients {
-    background-size:contain;
-    grid-area:ingredients;
+  background-size: contain;
+  grid-area: ingredients;
 }
 
 #note {
-    grid-area:note;
+  grid-area: note;
 }
 
 #line {
-    border-top:1px solid rgb(211, 211, 211);
+  border-top: 1px solid rgb(211, 211, 211);
 }
 
 #preparation {
-    grid-area:preparation;
+  grid-area: preparation;
 }
 
 /* Tooltip */
 #tooltip {
-    position:relative;
-    cursor:pointer;
-    font-weight:500;
+  position: relative;
+  cursor: pointer;
+  font-weight: 500;
 }
 
 #tooltip-text {
-    position:absolute;
-    left:4%;
-    top:-50%;
-    transform: translateX(-50%);
-    background-color: green;
-    color: #fff;
-    white-space: nowrap;
-    padding: 10px 15px;
-    border-radius:7px;
-    visibility: hidden;
-    opacity:0;
-    transition: opacity 0.5s ease;
- }
+  position: absolute;
+  left: 4%;
+  top: -50%;
+  transform: translateX(-50%);
+  background-color: green;
+  color: #fff;
+  white-space: nowrap;
+  padding: 10px 15px;
+  border-radius: 7px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
 
 #tooltip-text::before {
-    content:"";
-    position:absolute;
-    left: -30%;
-    top:50%;
-    transform: translateX(-50%);
- }
+  content: "";
+  position: absolute;
+  left: -30%;
+  top: 50%;
+  transform: translateX(-50%);
+}
 
-#tooltip:hover #tooltip-text{
-    left:12%;
-    visibility:visible;
-    opacity:1;
- }
+#tooltip:hover #tooltip-text {
+  left: 12%;
+  visibility: visible;
+  opacity: 1;
+}
 
-#menu #ingredients, ul {
-    line-height:30px;
+#menu #ingredients,
+ul {
+  line-height: 30px;
 }
 
 #menu ul {
-    padding:0;
-    list-style-type: none;
+  padding: 0;
+  list-style-type: none;
 }
 
 strong {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 #preparation ul {
-    line-height:55px;
-    list-style-type: none;
+  line-height: 55px;
+  list-style-type: none;
 }
 
 /* Footer*/
 .footer-basic {
-    display: flex;
-    flex-direction:row;
-    justify-content:center;
-    padding:50px 0;
-    background-color:#282D32;
-    color:white;
-  }
-  
-.footer-basic ul {
-    display:flex;
-    padding:0;
-    list-style:none;  
-    font-size:18px;
-    line-height:1.6;
-    margin-bottom:0;
-    text-align: center;
-  }
-  
-.footer-basic li {
-    padding:0px 15px;
-  }
-  
-.footer-basic ul a {
-    color:inherit;
-    text-decoration:none;
-    opacity:0.8;
-  }
-  
-.footer-basic ul a:hover {
-    opacity:1;
-  }
-  
-.footer-basic .social {
-    text-align:center;
-    padding-bottom:25px;
-  }
-  
-.footer-basic .social > a {
-    font-size:30px;
-    width:40px;
-    height:40px;
-    line-height:40px;
-    display:inline-block;
-    text-align:center;
-    margin:0 8px;
-    color:inherit;
-    opacity:0.75;
-  }
-
-.footer-basic .social > a:hover {
-    opacity:0.9;
-  }
-  
-  
-.footer-basic .copyright {
-    padding-top:30px;
-    text-align:center;
-    font-size:13px;
-    color:#aaa;
-    margin-bottom:0;
-  }
-
-/* Media queries */ 
-@media screen and (max-width:899px) and (min-width:501px) {
-    .banner {
-            background-image: url('./img/apple-pie-m.jpg');
-        }
-    #container {
-        width:75%;
-        grid-template-columns: 1fr;
-        grid-template-areas:
-        "recipe recipe"
-        "menu menu"
-        "ingredients ingredients"
-        "preparation preparation"
-        "note note";
-    }
-
-    .banner h1 {
-        font-size:3.5em;
-        flex-shrink:1;  
-        text-align:center;
-        animation:none;
-     }
-     
-     #tooltip-text {
-        display:none;
-    }
-
-    #preparation ul {
-        line-height:35px;
-        list-style-type: none;
-    }
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 50px 0;
+  background-color: #282d32;
+  color: white;
 }
 
-@media screen and (max-width:500px){
-    
-    .banner {
-        background-image:url('./img/apple-pie-s.jpg');
-    }
-    #container {
-        width:350px;
-        grid-template-columns: 1fr;
-        grid-template-areas:
-        "recipe"
-        "menu"
-        "ingredients"
-        "preparation"
-        "note";
-    }
-    .banner h1 {
-       font-size:3em;
-       flex-shrink:1; 
-       text-align:center;
-       animation:none;
-    }
+.footer-basic ul {
+  display: flex;
+  padding: 0;
+  list-style: none;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 0;
+  text-align: center;
+}
 
-    #tooltip-text {
-        display:none;
-    }
+.footer-basic ul li {
+  padding-left: 1em;
+}
 
-    #preparation ul {
-        line-height:30px;
-        list-style-type: none;
-    }
+.footer-basic ul a {
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.footer-basic ul a:hover {
+  opacity: 1;
+}
+
+.footer-basic .social {
+  text-align: center;
+  padding-bottom: 25px;
+}
+
+.footer-basic .social > a {
+  font-size: 30px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  display: inline-block;
+  text-align: center;
+  margin: 0 8px;
+  color: inherit;
+  opacity: 0.75;
+}
+
+.footer-basic .social > a:hover {
+  opacity: 0.9;
+}
+
+.footer-basic .copyright {
+  padding-top: 30px;
+  text-align: center;
+  font-size: 13px;
+  color: #aaa;
+  margin-bottom: 0;
+}
+
+/* Media queries */
+@media screen and (max-width: 899px) and (min-width: 501px) {
+  .banner {
+    background-image: url("./img/apple-pie-m.jpg");
+  }
+  #container {
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "recipe recipe"
+      "menu menu"
+      "ingredients ingredients"
+      "preparation preparation"
+      "note note";
+  }
+
+  .banner h1 {
+    font-size: 3.5em;
+    flex-shrink: 1;
+    text-align: center;
+    animation: none;
+  }
+
+  #tooltip-text {
+    display: none;
+  }
+
+  #preparation ul {
+    line-height: 35px;
+    list-style-type: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .banner {
+    background-image: url("./img/apple-pie-s.jpg");
+  }
+  #container {
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "recipe"
+      "menu"
+      "ingredients"
+      "preparation"
+      "note";
+  }
+  .banner h1 {
+    font-size: 3em;
+    flex-shrink: 1;
+    text-align: center;
+    animation: none;
+  }
+
+  footer {
+    width: 100%;
+  }
+
+  .footer-basic ul {
+    justify-content: space-around;
+  }
+
+  #tooltip-text {
+    display: none;
+  }
+
+  #preparation ul {
+    line-height: 30px;
+    list-style-type: none;
+  }
 }
